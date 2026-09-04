@@ -24,6 +24,10 @@ main { overflow: hidden; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-weight: 900; letter-spacing: .025em; }
 h1 { margin-bottom: 30px; color: #d6f349; font-family: 'Noto Sans JP', sans-serif; font-size: clamp(64px, 8.2vw, 126px); font-style: normal; letter-spacing: -.065em; line-height: 1.08; text-shadow: 7px 7px 0 #132a3a; white-space: nowrap; }
+.hero-title { position: relative; width: fit-content; }
+.hero-title-text { display: block; will-change: clip-path, transform; }
+.hero-title-scan { position: absolute; z-index: 2; top: -7%; bottom: -7%; width: 4px; pointer-events: none; background: #f5ffb6; box-shadow: 0 0 12px #d6f349, -14px 0 30px #d6f349cc; transform: skewX(-8deg); }
+.hero-title-scan::after { content: ''; position: absolute; top: 0; right: 0; width: clamp(46px, 6vw, 88px); height: 100%; background: linear-gradient(90deg, transparent, #d6f34945); }
 .hero-copy { margin-bottom: 36px; color: #d2d6db; font-size: 15px; line-height: 1.9; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .button { display: inline-flex; justify-content: center; align-items: center; gap: 28px; min-height: 52px; padding: 0 21px; font-size: 16px; font-weight: 800; letter-spacing: .08em; transition: transform .2s, background .2s; }

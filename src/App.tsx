@@ -8,6 +8,43 @@ const navItems = [
   ['RESULTS', '#results'],
 ] as const
 
+function HeroTitle({ title }: { title: string }) {
+  return (
+    <motion.h1
+      className="hero-title"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.05, when: 'beforeChildren' } },
+      }}
+    >
+      <motion.span
+        className="hero-title-text"
+        variants={{
+          hidden: { clipPath: 'inset(-12px 100% -12px -12px)' },
+          visible: {
+            clipPath: 'inset(-12px -12px -12px -12px)',
+            transition: { duration: 1.15, ease: 'easeInOut' },
+          },
+        }}
+      >
+        {title}
+      </motion.span>
+      <motion.span
+        className="hero-title-scan"
+        aria-hidden="true"
+        variants={{
+          hidden: { left: '-8%', opacity: 0 },
+          visible: {
+            left: '108%',
+            opacity: [0, 1, 1, 0],
+            transition: { duration: 1.15, times: [0, 0.1, 0.78, 1], ease: 'easeInOut' },
+          },
+        }}
+      />
+    </motion.h1>
+  )
+}
+
 function BrandMark({ label, logo, logoTone }: { label: string; logo?: string; logoTone?: 'light' | 'color' }) {
   if (logo) return <img className={`brand-image ${logoTone === 'color' ? 'brand-image-color' : ''}`} src={logo} alt={`${label} ロゴ`} />
 
@@ -63,7 +100,7 @@ function App() {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.14, delayChildren: 0.22 } } }}
         >
           <motion.p className="eyebrow" variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}><span /> JAPAN COMMUNITY EVENT / 001</motion.p>
-          <motion.h1 variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } } }}>{tournament.title}</motion.h1>
+          <HeroTitle title={tournament.title} />
           <motion.p className="hero-copy" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>領土を奪え。戦略を証明しろ。<br />日本のOpenFrontプレイヤーのためのトーナメント。</motion.p>
           <motion.div className="hero-actions" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
             <a className="button button-primary" href={tournament.discordUrl} target="_blank" rel="noreferrer">
