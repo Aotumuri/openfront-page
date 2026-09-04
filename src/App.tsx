@@ -1,5 +1,21 @@
-import { motion } from 'motion/react'
+import { motion, type Variants } from 'motion/react'
 import { tournament } from './data/tournament'
+
+const scrollReveal: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+  },
+}
+
+const scrollRevealGroup: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+}
+
+const scrollRevealViewport = { once: true, amount: 0.18 } as const
 
 const navItems = [
   ['OVERVIEW', '#overview'],
@@ -116,69 +132,69 @@ function App() {
       </section>
 
       <section className="section overview" id="overview">
-        <div className="section-heading">
+        <motion.div className="section-heading" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           <p className="eyebrow"><span /> MISSION BRIEFING</p>
           <h2>大会概要</h2>
           <p>{tournament.overview}</p>
-        </div>
-        <div className="detail-grid">
-          <article><p>FORMAT</p><strong>{tournament.format}</strong><small>好きな方と参加 / ランダム編成可</small></article>
-          <article><p>SCHEDULE</p><strong>{tournament.schedule}</strong><small>5分以内に集合されない場合は失格</small></article>
-          <article><p>ELIGIBILITY</p><strong>{tournament.eligibility}</strong><small>参加方法はDiscordで案内</small></article>
-          <article><p>PRIZE</p><strong>{tournament.prize}</strong><small>PayPayを利用できない方は @massoyo へ連絡</small></article>
-        </div>
-        <div className="prize-breakdown" aria-label="賞金内訳">
+        </motion.div>
+        <motion.div className="detail-grid" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollRevealGroup}>
+          <motion.article variants={scrollReveal}><p>FORMAT</p><strong>{tournament.format}</strong><small>好きな方と参加 / ランダム編成可</small></motion.article>
+          <motion.article variants={scrollReveal}><p>SCHEDULE</p><strong>{tournament.schedule}</strong><small>5分以内に集合されない場合は失格</small></motion.article>
+          <motion.article variants={scrollReveal}><p>ELIGIBILITY</p><strong>{tournament.eligibility}</strong><small>参加方法はDiscordで案内</small></motion.article>
+          <motion.article variants={scrollReveal}><p>PRIZE</p><strong>{tournament.prize}</strong><small>PayPayを利用できない方は @massoyo へ連絡</small></motion.article>
+        </motion.div>
+        <motion.div className="prize-breakdown" aria-label="賞金内訳" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           <p>PRIZE BREAKDOWN</p>
           <div>
             {tournament.prizeBreakdown.map((prize) => <span key={prize.place}><b>{prize.place}</b>{prize.amount}</span>)}
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="join-band" aria-labelledby="join-title">
+      <motion.section className="join-band" aria-labelledby="join-title" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
         <div>
           <p className="eyebrow"><span /> ENLIST NOW</p>
           <h2 id="join-title">作戦に参加せよ。</h2>
           <p>参加したい方は「{tournament.entryLocation}」で申請してください。</p>
         </div>
         <a className="button button-primary" href={tournament.discordUrl} target="_blank" rel="noreferrer">DISCORDを開く <span aria-hidden="true">↗</span></a>
-      </section>
+      </motion.section>
 
       <section className="section rules" id="rules">
-        <div className="section-heading compact">
+        <motion.div className="section-heading compact" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           <p className="eyebrow"><span /> PROTOCOL</p>
           <h2>ルール・注意事項</h2>
-        </div>
-        <div className="rule-list">
+        </motion.div>
+        <motion.div className="rule-list" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollRevealGroup}>
           {tournament.rules.map((rule, index) => (
-            <article key={rule.title}><b>{String(index + 1).padStart(2, '0')}</b><div><h3>{rule.title}</h3><p>{rule.description}</p></div></article>
+            <motion.article variants={scrollReveal} key={rule.title}><b>{String(index + 1).padStart(2, '0')}</b><div><h3>{rule.title}</h3><p>{rule.description}</p></div></motion.article>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="section sponsors" id="sponsors">
-        <div className="section-heading compact">
+        <motion.div className="section-heading compact" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           <p className="eyebrow"><span /> ALLIED FORCES</p>
           <h2>SPONSORS</h2>
           <p>大会を支援してくださるパートナーの皆さま。</p>
-        </div>
-        {leadSponsor && <div className="lead-sponsor"><SponsorCard sponsor={leadSponsor} featured /></div>}
-        <div className="sponsor-grid">
+        </motion.div>
+        {leadSponsor && <motion.div className="lead-sponsor" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}><SponsorCard sponsor={leadSponsor} featured /></motion.div>}
+        <motion.div className="sponsor-grid" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           {supportSponsors.map((sponsor) => <SponsorCard sponsor={sponsor} key={sponsor.name} />)}
-        </div>
+        </motion.div>
       </section>
 
       <section className="section results" id="results">
-        <div className="section-heading compact">
+        <motion.div className="section-heading compact" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
           <p className="eyebrow"><span /> AFTER ACTION REPORT</p>
           <h2>RESULTS</h2>
-        </div>
+        </motion.div>
         {tournament.resultsPublished ? (
-          <ol className="result-list">
+          <motion.ol className="result-list" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}>
             {tournament.results.map((result) => <li key={`${result.place}-${result.team}`}><b>#{result.place}</b><strong>{result.team}</strong><span>{result.detail}</span></li>)}
-          </ol>
+          </motion.ol>
         ) : (
-          <div className="results-pending"><span>⌁</span><h3>結果は大会終了後に公開</h3><p>熱戦の記録をここに掲載します。</p></div>
+          <motion.div className="results-pending" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollReveal}><span>⌁</span><h3>結果は大会終了後に公開</h3><p>熱戦の記録をここに掲載します。</p></motion.div>
         )}
       </section>
 
