@@ -30,6 +30,7 @@ export type Tournament = {
   discordLabel: string
   entryLocation: string
   schedule: string
+  scheduleIso: string
   format: string
   eligibility: string
   prize: string
@@ -51,7 +52,8 @@ export const tournament: Tournament = {
   status: 'エントリー受付中',
   discordUrl: 'https://discord.gg/YkrGu9J7kh',
   discordLabel: 'DISCORDで参加する',
-  schedule: '9/13 20:00 開始',
+  schedule: '2026年9月13日 20:00（JST）',
+  scheduleIso: '2026-09-13T20:00:00+09:00',
   format: 'デュオ大会',
   eligibility: 'デュオ参加 / ランダム編成可',
   prize: '総額 5,500円（PayPay）',
@@ -71,7 +73,7 @@ export const tournament: Tournament = {
     },
     {
       title: '集合時刻',
-      description: '9/13 20:00開始です。開始から5分以内に集合されていない場合は、その場で失格となります。',
+      description: '開始時刻から5分以内に集合されていない場合は、その場で失格となります。',
     },
     {
       title: '賞金の受け取り',
