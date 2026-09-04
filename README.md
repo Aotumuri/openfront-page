@@ -1,6 +1,8 @@
 # OpenFront Japan Tournament
 
-OpenFront Japan Tournament の公式特設ページです。
+OpenFront Japan Tournament の特設ページです。
+
+本大会および本ページはコミュニティによる非公式企画であり、OpenFront 公式は運営・制作に関与していません。
 
 ## ローカルで確認する
 
