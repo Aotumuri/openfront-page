@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">ネスカップ大会</title>
+  <desc id="description">2026年9月13日20時開催のOpenFront Japan、2人1組形式の大会</desc>
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#7595a8" stroke-opacity=".13"/>
+    </pattern>
+    <clipPath id="frame-cut">
+      <path d="M0 16 16 0h1168l16 16v598l-16 16H16L0 614z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#060910"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1000" cy="315" r="235" fill="none" stroke="#13d7d1" stroke-opacity=".12"/>
+  <circle cx="1000" cy="315" r="165" fill="none" stroke="#13d7d1" stroke-opacity=".08" stroke-width="54"/>
+  <path d="M675 0h525v630H510z" fill="#13d7d1" opacity=".035"/>
+
+  <g clip-path="url(#frame-cut)">
+    <path d="M0 0h1200v8H0zM0 622h1200v8H0z" fill="#13d7d1" opacity=".55"/>
+    <path d="M0 0h340v8H0zM860 622h340v8H860z" fill="#d6f349"/>
+  </g>
+
+  <g fill="none" stroke="#13d7d1" stroke-width="3">
+    <path d="M34 92V34h58M1108 34h58v58M1166 538v58h-58M92 596H34v-58"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-weight="700" letter-spacing="4">
+    <text x="72" y="79" fill="#d6f349" font-size="18">OPENFRONT JAPAN</text>
+    <text x="72" y="111" fill="#8f9ba5" font-size="13">COMMUNITY TOURNAMENT / 001</text>
+  </g>
+
+  <g font-family="Impact, Arial Black, sans-serif" font-style="italic" font-weight="900" letter-spacing="-7">
+    <text x="67" y="285" fill="#f4f3e9" font-size="202">NES</text>
+    <text x="157" y="465" fill="#d6f349" font-size="215">CUP</text>
+  </g>
+  <path d="M72 496h508" stroke="#13d7d1" stroke-width="3"/>
+  <text x="72" y="544" fill="#f4f3e9" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="29" font-weight="800" letter-spacing="8">ネスカップ大会</text>
+
+  <g transform="translate(704 126)">
+    <path d="M0 0h424l18 18v348H0z" fill="#08101c" fill-opacity=".96" stroke="#ffffff" stroke-opacity=".18"/>
+    <path d="M0 0h424l18 18v4H0z" fill="#d6f349"/>
+    <text x="30" y="63" fill="#13d7d1" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3">MATCH DAY</text>
+    <text x="30" y="118" fill="#f4f3e9" font-family="Arial Black, Arial, sans-serif" font-size="37" font-weight="900" letter-spacing="1">2026.09.13</text>
+    <text x="30" y="151" fill="#d6f349" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">20:00 JST</text>
+
+    <path d="M30 180h382" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="30" y="217" fill="#7f8c96" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">BATTLE FORMAT</text>
+    <text x="30" y="256" fill="#f4f3e9" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="24" font-weight="800">デュオ形式（2人1組）</text>
+
+    <path d="M30 282h382" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="30" y="319" fill="#7f8c96" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">TOTAL PRIZE</text>
+    <text x="245" y="322" fill="#d6f349" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="27" font-weight="800">5,500円</text>
+  </g>
+
+  <text x="72" y="592" fill="#66727c" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">UNOFFICIAL COMMUNITY EVENT</text>
+</svg>
