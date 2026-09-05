@@ -54,18 +54,19 @@ export const tournament: Tournament = {
   discordLabel: 'DISCORDで参加する',
   schedule: '2026年9月13日 20:00（JST）',
   scheduleIso: '2026-09-13T20:00:00+09:00',
-  format: 'デュオ大会',
-  eligibility: 'デュオ参加 / ランダム編成可',
-  prize: '総額 5,500円（PayPay）',
-  entryLocation: '[JP] OpenFront日本人サーバー / ネスカップエントリー用',
+  format: 'ソロ大会',
+  eligibility: 'ソロ参加',
+  prize: '総額 6,050円（PayPay）',
+  entryLocation: 'ネスカップエントリー用',
   prizeBreakdown: [
-    { place: '1ST', amount: '1,500円 × 2名' },
-    { place: '2ND', amount: '750円 × 2名' },
-    { place: '3RD', amount: '300円 × 2名' },
-    { place: '4TH–5TH', amount: '100円 × 2名' },
+    { place: '1ST', amount: '3,000円' },
+    { place: '2ND', amount: '1,500円' },
+    { place: '3RD', amount: '750円' },
+    { place: '4TH', amount: '500円' },
+    { place: '5TH', amount: '300円' },
   ],
   overview:
-    '好きな方とデュオを組むか、デュオを組みたい参加者とのランダム編成を選べる、OpenFrontのデュオ大会です。',
+    '個人で参加するOpenFrontのソロ大会です。ソロ形式への変更に伴い賞金プールも増額しました。ぜひたくさんのご参加をお待ちしています。',
   rules: [
     {
       title: '試合設定',
@@ -81,15 +82,15 @@ export const tournament: Tournament = {
     },
     {
       title: '順位の決め方',
-      description: '3試合の合計ポイントで順位を決定します。1位100PT、2位70PT、3位50PT、4位40PT、5位30PT、6〜8位10PT、9〜10位5PT。1撃破につき7PTです。',
+      description: '3試合の合計ポイントで順位を決定します。1マッチごとのポイントは、1位100PT、2位70PT、3位50PT、4位45PT、5位40PT、6位35PT、7位30PT、8位25PT、9位20PT、10位16PT、11位14PT、12位12PT、13位10PT、14位8PT、15位6PT、16位5PT、17位4PT、18位3PT、19位2PT、20位1PTです。1撃破につき10PTを加算します。ポイントが同一の場合は、3試合の平均順位が高いプレイヤーを上位とします。',
     },
   ],
   resultsPublished: false,
   results: [],
   sponsors: [
     {
-      name: '砂糖',
-      description: '大会企画および大会賞金をご提供いただきました。SATO鯖のコミュニティへ参加できます。',
+      name: 'SATO鯖',
+      description: '大会をご支援いただいています。クラン作成には15人のアクティブメンバーが必要なため、参加や見学だけでも歓迎しています。',
       url: 'https://discord.gg/Z283cdawzc',
     },
     {

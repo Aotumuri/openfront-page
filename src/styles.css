@@ -122,7 +122,7 @@ h1, h2 { font-family: 'Barlow Condensed', 'Noto Sans JP', sans-serif; font-weigh
 .sponsor-card:is(:hover, :focus-visible) { border-color: var(--acid); transform: translateY(-3px); }
 .lead-sponsor { margin-bottom: 14px; }
 .sponsor-feature { min-height: 240px; grid-template-columns: 1fr auto; position: relative; overflow: hidden; border: 1px solid #d6f34975; border-top: 3px solid var(--acid); background: radial-gradient(circle at 12% 53%, #d6f34922 0 20%, transparent 20.5%), linear-gradient(108deg, #17241e, #111a28 55%, #0c111b); }
-.sponsor-feature::after { content: 'SUGAR'; position: absolute; right: 4%; bottom: -30px; color: #d6f3490b; font: italic 900 clamp(100px, 16vw, 220px)/1 'Barlow Condensed', sans-serif; pointer-events: none; }
+.sponsor-feature::after { content: 'SATO'; position: absolute; right: 4%; bottom: -30px; color: #d6f3490b; font: italic 900 clamp(100px, 16vw, 220px)/1 'Barlow Condensed', sans-serif; pointer-events: none; }
 .sponsor-feature h3 { position: relative; z-index: 1; margin-bottom: 8px; color: #f4f3e9; font-size: clamp(43px, 6vw, 75px); line-height: .9; }
 .sponsor-feature h3 + p { position: relative; z-index: 1; font-size: 14px; }
 .sponsor-role { margin-bottom: 12px !important; color: var(--acid) !important; font: 700 13px 'Barlow Condensed', sans-serif !important; letter-spacing: .13em; }

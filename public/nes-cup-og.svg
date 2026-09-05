@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
   <title id="title">ネスカップ大会</title>
-  <desc id="description">2026年9月13日20時開催のOpenFront Japan、2人1組形式の大会</desc>
+  <desc id="description">2026年9月13日20時開催のOpenFront Japanソロ大会</desc>
   <defs>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M48 0H0V48" fill="none" stroke="#7595a8" stroke-opacity=".13"/>
@@ -46,11 +46,11 @@
 
     <path d="M30 180h382" stroke="#ffffff" stroke-opacity=".16"/>
     <text x="30" y="217" fill="#7f8c96" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">BATTLE FORMAT</text>
-    <text x="30" y="256" fill="#f4f3e9" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="24" font-weight="800">デュオ形式（2人1組）</text>
+    <text x="30" y="256" fill="#f4f3e9" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="24" font-weight="800">ソロ大会</text>
 
     <path d="M30 282h382" stroke="#ffffff" stroke-opacity=".16"/>
     <text x="30" y="319" fill="#7f8c96" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">TOTAL PRIZE</text>
-    <text x="245" y="322" fill="#d6f349" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="27" font-weight="800">5,500円</text>
+    <text x="245" y="322" fill="#d6f349" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="27" font-weight="800">6,050円</text>
   </g>
 
   <text x="72" y="592" fill="#66727c" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">UNOFFICIAL COMMUNITY EVENT</text>

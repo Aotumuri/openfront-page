@@ -139,7 +139,7 @@ function App() {
         >
           <motion.p className="eyebrow hero-eyebrow" variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } }}><span /> OPENFRONT JAPAN / COMMUNITY TOURNAMENT</motion.p>
           <HeroTitle title={tournament.title} />
-          <motion.p className="hero-copy" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}><b>領土を奪え。戦略を証明しろ。</b><br />日本のOpenFrontプレイヤーのためのデュオトーナメント。</motion.p>
+          <motion.p className="hero-copy" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}><b>領土を奪え。戦略を証明しろ。</b><br />日本のOpenFrontプレイヤーのためのソロトーナメント。</motion.p>
           <motion.div className="hero-actions" variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
             <a className="button button-primary" href={tournament.discordUrl} target="_blank" rel="noreferrer">
               <FaDiscord aria-hidden="true" /> {tournament.discordLabel} <HiArrowUpRight aria-hidden="true" />
@@ -167,7 +167,7 @@ function App() {
           <p>{tournament.overview}</p>
         </motion.div>
         <motion.div className="detail-grid" aria-label="大会情報" initial="hidden" whileInView="visible" viewport={scrollRevealViewport} variants={scrollRevealGroup}>
-          <motion.article variants={scrollReveal}><p>FORMAT</p><strong>{tournament.format}</strong><small>好きな方と参加 / ランダム編成可</small></motion.article>
+          <motion.article variants={scrollReveal}><p>FORMAT</p><strong>{tournament.format}</strong><small>個人でエントリー</small></motion.article>
           <motion.article variants={scrollReveal}><p>SCHEDULE</p><strong><time dateTime={tournament.scheduleIso}>{tournament.schedule}</time></strong><small>5分以内に集合されない場合は失格</small></motion.article>
           <motion.article variants={scrollReveal}><p>ELIGIBILITY</p><strong>{tournament.eligibility}</strong><small>参加方法はDiscordで案内</small></motion.article>
           <motion.article variants={scrollReveal}><p>PRIZE</p><strong>{tournament.prize}</strong><small>PayPayを利用できない方は @massoyo へ連絡</small></motion.article>
